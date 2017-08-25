@@ -1,5 +1,31 @@
+=begin
+
 def reverse_each_word(string)
-  reverse_each_word = string.split(' ')
-  reversed_words = reverse_each_word.collect { |word| word.reverse }
-  reversed_words.join(' ')
+
+    stringArray = string.split(' ')
+
+    #----
+
+    reverseString = ''
+
+    stringArray.each do |ele|
+
+        reverseString += "#{ele.reverse()} "
+
+    end
+    reverseString.rstrip()
+end
+
+=end
+
+def reverse_each_word(string)
+
+    stringArray = string.split(' ')
+    #----
+    reversedString = ''
+    #----
+    stringArray.collect() {|word| reversedString << "#{word.reverse} "}
+    #----
+    return reversedString.rstrip()
+    
 end
